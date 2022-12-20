@@ -42,7 +42,6 @@ services:
     env_file:
       - .env
     volumes:
-      - ./mysql:/var/lib/mysql
       - mariadb-data:/var/lib/mysql
 
   phpmyadmin:
