@@ -29,8 +29,8 @@ jobs:
       - name: Run tests
         run: |
           if [ -f docker-compose.yml ]; then
-            docker-compose --file docker-compose.yml build
-            docker-compose --file docker-compose.yml run
+            docker-compose --file docker-compose.yml build --env-file ./.env --detach
+            docker-compose --file docker-compose.yml run --env-file ./.env --detach
           else
             docker build . --file ./php/Dockerfile
             docker build . --file ./nginx/Dockerfile
