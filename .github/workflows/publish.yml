@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
 
-    permissions: read-all|write-all
+    permissions: write-all
 
     steps:
       - uses: actions/checkout@v2
