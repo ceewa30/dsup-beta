@@ -1,0 +1,274 @@
+/*
+ Theme Name:     The Basic
+ Theme URI:      https://thebasic.valaskastudio.com/
+ Description:    Wireframe UI Kit
+ Author:         valaska studio
+ Author URI:     https://valaskastudio.com/
+ Template:       Divi
+ Version:        1.0.0
+ License:     	 GNU General Public License v2 or later
+ License URI: 	 http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+
+/*----------Theme CSS----------*/
+
+/* THE BASIC by valaska studio */
+/* DIVI WIREFRAME UI KIT STYLES */
+
+/*---BUTTON MODULE---*/
+
+/* Inline Buttons */
+.tbvs-inline-button .et_pb_button_module_wrapper {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+/* Inline Buttons Centered */
+.tbvs-inline-button-center .et_pb_button_module_wrapper {
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+  
+.tbvs-inline-button-center {
+	text-align: center;
+}
+
+
+/*---FOOTER SECTION---*/
+
+/* Footer Inline Navigation */
+.tbvs-footer-inline-navigation ul li {
+	display: inline-block!important;
+	padding: 5px 10px!important;
+}
+
+.tbvs-footer-inline-navigation ul {
+	padding-bottom: 0!important;
+	padding-left: 0!important;
+}
+
+
+/*---BLURB MODULE---*/
+
+/* Circle Icon Padding */
+.tbvs-blurb .et-pb-icon-circle {
+	padding: 10px;
+}
+
+
+/*---EMAIL OPT-IN MODULE---*/
+
+/* Inline Email Opt-In */
+@media (min-width: 479px) {
+    .tbvs-email-optin-inline.et_pb_newsletter .et_pb_newsletter_fields {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    
+	.tbvs-email-optin-inline.et_pb_newsletter .et_pb_newsletter_fields>* {
+  		margin-right: 20px;
+	}
+    
+    .tbvs-email-optin-inline.et_pb_newsletter .et_pb_newsletter_fields>*:last-child  {
+  		margin-right: 0;
+	}
+}
+
+
+/*---PRICING TABLES MODULE---*/
+
+/* Pricing Table Style */
+.tbvs-pricing .et_pb_frequency {
+	display: block;
+}
+
+.tbvs-pricing .et_pb_dollar_sign {
+	position: relative;
+	margin-right: 10px;
+	margin-left: 0!important;
+}
+
+.tbvs-pricing .et_pb_frequency_slash {
+	display: none;
+}
+
+/* Pricing Table Bullet Style */
+.tbvs-pricing-bullet .et_pb_pricing li span:before {
+	font-family: ETmodules;
+	content: "\4e";
+	font-weight: 800;
+	border: none;
+	border-radius: 0;
+	left: -16px;
+	position: absolute;
+	top: 0px;
+	border-radius: 0;
+}
+
+.tbvs-pricing-bullet .et_pb_pricing li.et_pb_not_available span:before {
+	content: "\4d";
+}
+
+.tbvs-pricing-bullet.et_pb_pricing_no_bullet .et_pb_pricing li {
+	padding-left: 0!important;	
+}
+
+/* Pricing Table Boxed */
+.tbvs-pricing-boxed .et_pb_pricing_table {
+	box-shadow: 0px 2px 18px 0px rgb(0, 0, 0, 0.3);
+}
+
+/* Pricing Table Gap */
+.tbvs-pricing-gap .et_pb_pricing_table_wrap {
+	justify-content: space-between;
+}
+
+.tbvs-pricing-gap .et_pb_pricing_table {
+	width: 31%;
+    max-width: 31%;
+}
+
+.et_pb_column_4_4 .tbvs-pricing-gap .et_pb_pricing_table {
+	width: 22.5%;
+    max-width: 22.5%;
+}
+
+.et_pb_column_4_4 .tbvs-pricing-gap.et_pb_pricing_3 .et_pb_pricing_table {
+    width: 31%;
+    max-width: 31%;
+}
+
+.et_pb_column_1_2 .tbvs-pricing-gap .et_pb_pricing_table,
+.et_pb_column_2_3 .tbvs-pricing-gap .et_pb_pricing_table,
+.et_pb_column_3_5 .tbvs-pricing-gap .et_pb_pricing_table,
+.tbvs-pricing-gap.et_pb_pricing_2 .et_pb_pricing_table {
+    width: 48%;
+    max-width: 48%;
+}
+
+.et_pb_column_1_3 .tbvs-pricing-gap .et_pb_pricing_table,
+.et_pb_column_1_4 .tbvs-pricing-gap .et_pb_pricing_table,
+.et_pb_column_1_5 .tbvs-pricing-gap .et_pb_pricing_table,
+.et_pb_column_1_6 .tbvs-pricing-gap .et_pb_pricing_table,
+.et_pb_column_2_5 .tbvs-pricing-gap .et_pb_pricing_table,
+.et_pb_column_3_8 .tbvs-pricing-gap .et_pb_pricing_table,
+.tbvs-pricing-gap.et_pb_pricing_1 .et_pb_pricing_table {
+    width: 100%;
+    max-width: none;
+}
+
+@media (min-width: 767px) and (max-width: 980px) { .et_pb_column .tbvs-pricing-gap .et_pb_pricing_table {	
+		max-width: 48%!important;
+	}
+}
+
+
+/*---PERSON MODULE---*/
+
+/* Person Social Icons Style */
+.tbvs-person-circle-icon .et_pb_member_social_links a:before {
+	display: block;
+	height: 32px;
+    width: 32px;
+    line-height: 32px;
+	padding: 8px;
+	border: 1px solid;
+	border-radius: 50%;
+}
+
+/* Fix Social Icons Last Child Margin */
+.et_pb_member_social_links li:last-child {
+	margin-right: 0px;
+}
+
+
+/*---COMPANIES SECTION---*/
+
+/* Inline Logos At Mobile View */
+@media (max-width: 980px) {
+    .tbvs-inline-logo-section .et_pb_column {
+        width: 29.333%!important;
+        margin-right: 2%!important;
+        margin-left: 2%!important;
+    }
+
+    .tbvs-inline-logo-section .et_pb_column.et_pb_column_empty {
+        display: none;
+    }
+}
+
+
+/*---CIRCLE COUNTER MODULE---*/
+
+/* Counter Circle Size */
+.tbvs-circle-counter.et_pb_circle_counter .percent, .tbvs-circle-counter.et_pb_circle_counter canvas {
+    max-width: 175px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+
+/*---BLOG MODULE---*/
+
+/* Blog Image Left Style 1 */ 
+@media (min-width: 479px) {
+    .tbvs-blog-img-style1 .et_pb_post.has-post-thumbnail .entry-featured-image-url {
+        float: left;
+        max-width: 33%;
+        margin-bottom: 0;
+        margin-right: 5.5%;
+    }
+	
+	.tbvs-blog-img-style1 .et_pb_post.has-post-thumbnail {
+		margin-bottom: 25px;
+	}
+	
+	.tbvs-blog-img-style1 .et_pb_post.has-post-thumbnail .entry-title, .tbvs-blog-img-style1 .et_pb_post.has-post-thumbnail .post-meta, .tbvs-blog-img-style1 .et_pb_post.has-post-thumbnail .post-content {
+		margin-left: 38.5%;
+	}
+}
+
+/* Blog Image Left Style 2 */
+@media (min-width: 981px) {
+    .tbvs-blog-img-style2 .et_pb_post.has-post-thumbnail .entry-featured-image-url {
+        float: left;
+        max-width: 50%;
+        margin-bottom: 0;
+        margin-right: 5.5%;
+    }
+
+	.tbvs-blog-img-style2 .et_pb_post.has-post-thumbnail .entry-title, .tbvs-blog-img-style2 .et_pb_post.has-post-thumbnail .post-meta, .tbvs-blog-img-style2 .et_pb_post.has-post-thumbnail .post-content {
+		margin-left: 55.5%;
+	}
+}
+
+
+/*---PORTFOLIO MODULE---*/
+
+/* Portfolio Title Margin */
+.tbvs-portfolio .et_pb_portfolio_item .et_pb_module_header {
+	margin-top: 20px;
+}
+
+/* Filterable Portfolio Navigation */
+.tbvs-portfolio-filter.et_pb_filterable_portfolio .et_pb_portfolio_filters li a {
+	border: none;
+	background-color: transparent;
+}
+
+.tbvs-portfolio-filter.et_pb_filterable_portfolio .et_pb_portfolio_filters li a:hover {
+	background-color: transparent;
+}
+
+.tbvs-portfolio-filter.et_pb_filterable_portfolio .et_pb_portfolio_filters li a.active {
+	background-color: transparent;
+}
+
+
+/* END OF THE BASIC STYLES */

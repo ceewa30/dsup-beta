@@ -1,0 +1,61 @@
+version: '3.9' 
+
+services:
+
+  nginx:
+    build: ./nginx/
+    container_name: nginx-container
+    restart: always
+    tty: true
+    ports:
+      - "80:80"
+    depends_on:
+      - php
+      - db
+    volumes_from:
+      - app-data
+
+  php:
+    build: ./php/
+    container_name: php-container
+    expose:
+      - 9000
+    volumes_from:
+      - app-data
+    depends_on:
+      - db
+
+  app-data:
+    image: php:8.1-fpm
+    container_name: app-data-container
+    volumes: 
+      - ./wordpress:/var/www/html:delegated
+      - ./php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - ./logs:/var/log/nginx
+    command: "true"
+
+  db:
+    image: mariadb:latest
+    container_name: db
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      # - ./mysql:/var/lib/mysql
+      - mariadb-data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: backend-dbase
+    restart: always
+    ports:
+      - 8081:80
+    environment:
+      - "PMA_HOST=db"
+      - "PMA_ARBITRARY=1"
+    depends_on:
+      - db
+
+volumes:
+  mariadb-data:
